@@ -39,7 +39,7 @@ nitro-server (Acer Nitro 5)
 ## Phases
 
 - [x] Phase 1 — Base server setup (Ubuntu, SSH, Tailscale, Ollama)
-- [ ] Phase 2 — Dockerize services, RAG API deployment
+- [x] Phase 2 — Dockerize services, RAG API deployment
 - [ ] Phase 3 — Prometheus + Grafana observability
 - [ ] Phase 4 — GitHub Actions CI/CD
 
@@ -52,6 +52,21 @@ ssh om@nitro-server
 ```
 
 Ollama API endpoint: http://nitro-server:11434
+
+## Services
+
+### Ollama (LLM Serving)
+- Model: `phi3:mini` (3.8B parameters, 4-bit quantized)
+- Endpoint: `http://nitro-server:11434`
+- No API costs — fully local inference
+
+### RAG API (FastAPI)
+- Endpoint: `http://nitro-server:8000`
+- `GET /health` — health check
+- `POST /query` — ask a question, get answer + sources
+- `GET /docs` — interactive Swagger UI
+- Backed by ChromaDB (236 chunks from 2 research papers)
+- LLM: Ollama primary, Groq fallback (circuit breaker pattern)
 
 ## Related Projects
 
