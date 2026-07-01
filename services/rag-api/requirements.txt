@@ -1,0 +1,18 @@
+sentence-transformers
+chromadb
+pdfplumber
+groq
+python-dotenv
+pyyaml
+loguru
+fastapi
+uvicorn
+gradio
+rank-bm25
+requests
+
+# Testing
+pytest
+black
+ruff
+fpdf2

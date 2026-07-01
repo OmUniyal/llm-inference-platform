@@ -1,0 +1,23 @@
+2026-07-01 03:27:23 | INFO | main:26 - Initializing RAG chain...
+2026-07-01 03:27:23 | INFO | src.retrieval.embedder:25 - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-07-01 03:27:32 | INFO | src.retrieval.embedder:29 -   Embedding dimension: 384
+2026-07-01 03:27:33 | INFO | src.retrieval.vector_store:34 - Vector store ready: 'rag_documents' at ./chroma_db
+2026-07-01 03:27:33 | INFO | src.retrieval.vector_store:35 -   Current document count: 0
+2026-07-01 03:27:33 | INFO | src.generation.llm_client:32 - LLM client ready: Ollama primary (phi3:mini), Groq fallback (disabled)
+2026-07-01 03:27:33 | INFO | main:28 - RAG chain ready.
+2026-07-01 03:37:33 | INFO | main:26 - Initializing RAG chain...
+2026-07-01 03:37:33 | INFO | src.retrieval.embedder:25 - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-07-01 03:37:41 | INFO | src.retrieval.embedder:29 -   Embedding dimension: 384
+2026-07-01 03:37:42 | INFO | src.retrieval.vector_store:34 - Vector store ready: 'rag_documents' at ./chroma_db
+2026-07-01 03:37:42 | INFO | src.retrieval.vector_store:35 -   Current document count: 236
+2026-07-01 03:37:42 | INFO | src.generation.llm_client:32 - LLM client ready: Ollama primary (phi3:mini), Groq fallback (disabled)
+2026-07-01 03:37:42 | INFO | main:28 - RAG chain ready.
+2026-07-01 03:40:03 | INFO | src.generation.rag_chain:35 - Query received: 'what is the difference between RAG sequence and RAG token models?'
+2026-07-01 03:40:03 | INFO | src.retrieval.retriever:31 - Retrieving top-5 chunks for: 'what is the difference between RAG sequence and RAG token mo...'
+2026-07-01 03:40:03 | DEBUG | src.retrieval.retriever:37 -   [1] score=0.57 | rag_for_knowledge_intesive_NLP_tasks.pdf p7
+2026-07-01 03:40:03 | DEBUG | src.retrieval.retriever:37 -   [2] score=0.5623 | rag_for_knowledge_intesive_NLP_tasks.pdf p4
+2026-07-01 03:40:03 | DEBUG | src.retrieval.retriever:37 -   [3] score=0.4684 | rag_for_knowledge_intesive_NLP_tasks.pdf p8
+2026-07-01 03:40:03 | DEBUG | src.retrieval.retriever:37 -   [4] score=0.4651 | rag_for_knowledge_intesive_NLP_tasks.pdf p3
+2026-07-01 03:40:03 | DEBUG | src.retrieval.retriever:37 -   [5] score=0.4528 | rag_for_knowledge_intesive_NLP_tasks.pdf p8
+2026-07-01 03:40:03 | INFO | src.generation.rag_chain:44 - Sending to LLM...
+2026-07-01 03:40:53 | INFO | src.generation.rag_chain:60 - Answer generated. Sources: ['rag_for_knowledge_intesive_NLP_tasks.pdf', 'rag_for_knowledge_intesive_NLP_tasks.pdf', 'rag_for_knowledge_intesive_NLP_tasks.pdf', 'rag_for_knowledge_intesive_NLP_tasks.pdf', 'rag_for_knowledge_intesive_NLP_tasks.pdf']
