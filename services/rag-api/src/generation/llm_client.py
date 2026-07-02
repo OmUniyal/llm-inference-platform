@@ -15,7 +15,7 @@ from groq import Groq
 from src.utils.config import config
 from src.utils.logger import logger
 
-OLLAMA_URL = "http://nitro-server:11434/api/generate"
+OLLAMA_URL = "http://172.17.0.1:11434/api/generate"
 
 
 class LLMClient:
