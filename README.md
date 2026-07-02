@@ -68,6 +68,10 @@ Ollama API endpoint: http://nitro-server:11434
 - Backed by ChromaDB (236 chunks from 2 research papers)
 - LLM: Ollama primary, Groq fallback (circuit breaker pattern)
 
+### Deployment Notes
+- RAG API container runs with `--restart unless-stopped` — auto-recovers on server reboot
+- Ollama is accessed via Docker gateway IP (`172.17.0.1`) from inside the container
+
 ## Related Projects
 
 - [rag-document-qa](https://github.com/OmUniyal/rag-document-qa) — RAG system wired to this inference server
